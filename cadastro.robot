@@ -10,4 +10,4 @@ Cadastro simples
 
 ***Keywords***
 Dado que acesso a página principal
-    Open Browser    http://ninjachef-qaninja-io.umbler.net/
+    Open Browser    http://ninjachef-qaninja-io.umbler.net/    chrome
