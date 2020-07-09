@@ -2,8 +2,6 @@
 
 Documentation   Suite dos testes de cadastro
 
-Library         SeleniumLibrary
-
 Test Setup    Open Session
 Test Teardown    Close Session
 
