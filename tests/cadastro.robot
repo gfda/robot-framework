@@ -1,8 +1,9 @@
 ***Settings***
 
-Documentation   Suite dos testes de cadastro
+Documentation    Suite dos testes de cadastro
 
-Test Setup    Open Session
+Resource         ../resources/base.robot
+Test Setup       Open Session
 Test Teardown    Close Session
 
 ***Test Cases***
