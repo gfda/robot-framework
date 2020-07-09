@@ -23,10 +23,3 @@ Quando submeto o meu email "${email}"
 
 Então devo ser autenticado
     Wait Until Page Contains Element     class:dashboard
-
-## Hooks
-Open Session
-    Open Browser    about:blank    Chrome    executable_path=drivers/chromedriver
-
-Close Session
-    Close Browser
