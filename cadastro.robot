@@ -2,7 +2,10 @@
 
 Documentation   Suite dos testes de cadastro
 
-Library    SeleniumLibrary
+Library         SeleniumLibrary
+
+Test Setup    Open Session
+Test Teardown    Close Session
 
 ***Test Cases***
 Cadastro simples
@@ -12,7 +15,7 @@ Cadastro simples
 
 ***Keywords***
 Dado que acesso a página principal
-    Open Browser    http://ninjachef-qaninja-io.umbler.net/    Chrome    executable_path=drivers/chromedriver
+    Go To    http://ninjachef-qaninja-io.umbler.net/
 
 Quando submeto o meu email "${email}"
     Input Text    id:email    ${email}
@@ -20,4 +23,10 @@ Quando submeto o meu email "${email}"
 
 Então devo ser autenticado
     Wait Until Page Contains Element     class:dashboard
+
+## Hooks
+Open Session
+    Open Browser    about:blank    Chrome    executable_path=drivers/chromedriver
+
+Close Session
     Close Browser
