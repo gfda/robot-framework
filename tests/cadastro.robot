@@ -11,3 +11,8 @@ Cadastro simples
     Dado que acesso a página principal
     Quando submeto o meu email "test@mail.com"
     Então devo ser autenticado
+
+Email incorreto
+    Dado que acesso a página principal
+    Quando submeto o meu email "test$mail.com"
+    Então devo ver a mensagem "Oops. Informe um email válido!"
