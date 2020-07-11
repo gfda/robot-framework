@@ -16,4 +16,5 @@ Open Session
     Open Browser    about:blank    Chrome    executable_path=../drivers/chromedriver
 
 Close Session
+    Capture Page Screenshot
     Close Browser
