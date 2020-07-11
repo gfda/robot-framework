@@ -6,8 +6,8 @@ Login Session
     [Arguments]    ${email}
     
     base.Open Session
-    
-    Go To    http://ninjachef-qaninja-io.umbler.net/
-    Input Text    id:email    ${email}
-    Click Element    css:button[type=submit]
-    Wait Until Page Contains Element     class:dashboard
+
+    Go To                               ${base_url}
+    Input Text                          ${INPUT_EMAIL}          ${email}
+    Click Element                       ${BTN_QUERO_COZINHAR}
+    Wait Until Page Contains Element    ${DIV_DASHBOARD}
