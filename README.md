@@ -30,6 +30,13 @@ Para checar que foi tudo instalado com sucesso
 pipenv graph
 ```
 
-## Testes
+## Execução dos testes
 
+
+```console
 pipenv run robot nome-do-arquivo.robot
+```
+
+## Autor
+
+[Gustavo Dias A.](https://www.linkedin.com/in/gustavo-dias-alexandre-543568157/)
