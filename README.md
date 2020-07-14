@@ -6,7 +6,7 @@ Estudo de automação com robot framework, durante a 2ª edição do robo week -
 
 ## Setup
 
-Utilizei o pipenv, para criar um ambiente virtual do Python
+Utilizei o pipenv para criar um ambiente virtual do Python
 
 ```console
 pipenv install
