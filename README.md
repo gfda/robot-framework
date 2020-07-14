@@ -32,7 +32,6 @@ pipenv graph
 
 ## Execução dos testes
 
-
 ```console
 pipenv run robot nome-do-arquivo.robot
 ```
