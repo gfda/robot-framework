@@ -2,7 +2,7 @@
 
 ![Robot Framework Logo](images/Robot-Framework-2000x1200.jpg)
 
-Estudo de automação com robot framework, durante a 2ª edição do robo week - disponibilizado pelo QA Ninja e o Fernando Papito.
+Estudo de automação web utilizando robot framework e Selenium Library, durante a 2ª edição do robo week - disponibilizado pelo QA Ninja e o Fernando Papito.
 
 ## Setup
 
