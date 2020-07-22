@@ -7,6 +7,7 @@ Documentation       Receber pedidos
 Resource        ../resources/base.robot
 
 Library         RequestsLibrary
+Library         OperatingSystem
 
 Test Setup      Open Session
 Test Teardown   Close Session
@@ -31,10 +32,20 @@ Dado que "${email_cozinheiro}" é a minha conta de cozinheiro
     ${response}             Post Request            api     /sessions       data=${payload}     headers=${headers}
     Status Should Be        200                     ${response}
 
-    Log To Console          ${response.json()['_id']}
-    
+    ${token_cozinheiro}     Convert To String       ${response.json()['_id']}
+    Set Test Variable       ${token_cozinheiro}
+
 E "${email_cliente}" é o email do meu cliente
     Set Test Variable       ${email_cliente}
 
 E que "${produto}" está cadastrado no meu dashboard
     Set Test Variable       ${produto}
+
+    &{payload}=             Create Dictionary       name=${produto}     plate=Massas    price=18.00
+    ${image_file}=          Get Binary File         ../resources/images/nhoque.jpg
+    &{files}=               Create Dictionary       thumbnail=${image_file}
+    &{headers}=             Create Dictionary       user_id=${token_cozinheiro}
+
+    Create Session           api                     http://ninjachef-api-qaninja-io.umbler.net
+    ${response}             Post Request            api     /products       files=${files}      data=${payload}     headers=${headers}
+    Status Should Be        200                     ${response}
