@@ -2,7 +2,7 @@
 
 ![Robot Framework Logo](images/Robot-Framework-2000x1200.jpg)
 
-Estudo de automação web utilizando robot framework e Selenium Library, durante a 2ª edição do robo week - disponibilizado pelo QA Ninja e o Fernando Papito.
+Estudo de automação web e testes de API utilizando robot framework e Selenium Library, durante a 2ª edição do robo week - disponibilizado pelo QA Ninja e o Fernando Papito.
 
 ## Setup
 
@@ -22,6 +22,12 @@ pipenv install robotframework
 
 ```console
 pipenv install robotframework-seleniumlibrary
+```
+
+Os testes de API serão feitos via requests, utilizando a *robot framework requests*
+
+```console
+pipenv install robotframework-requests
 ```
 
 Para checar que foi tudo instalado com sucesso
