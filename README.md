@@ -24,7 +24,7 @@ pipenv install robotframework
 pipenv install robotframework-seleniumlibrary
 ```
 
-Os testes de API serão feitos via requests, utilizando a *robot framework requests*
+Os testes de API serão feitos via requests, utilizando a *robot framework requests library*
 
 ```console
 pipenv install robotframework-requests
