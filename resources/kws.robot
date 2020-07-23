@@ -36,27 +36,13 @@ Então devo ver este prato no meu dashboard
 Dado que "${email_cozinheiro}" é a minha conta de cozinheiro
     Set Test Variable       ${email_cozinheiro}
 
-    &{headers}=             Create Dictionary       Content-Type=application/json
-    &{payload}=             Create Dictionary       email=${email_cozinheiro}
-    
-    Create Session           api                    ${api_url}
-    ${response}             Post Request            api     /sessions       data=${payload}     headers=${headers}
-    Status Should Be        200                     ${response}
-
-    ${token_cozinheiro}     Convert To String       ${response.json()['_id']}
+    ${token_cozinheiro}=    Get API Token           ${email_cozinheiro}  
     Set Test Variable       ${token_cozinheiro}
 
 E "${email_cliente}" é o email do meu cliente
     Set Test Variable       ${email_cliente}
 
-    &{headers}=             Create Dictionary       Content-Type=application/json
-    &{payload}=             Create Dictionary       email=${email_cliente}
-    
-    Create Session           api                    ${api_url}
-    ${response}             Post Request            api     /sessions       data=${payload}     headers=${headers}
-    Status Should Be        200                     ${response}
-
-    ${token_cliente}     Convert To String       ${response.json()['_id']}
+    ${token_cliente}=    Get API Token           ${email_cliente}  
     Set Test Variable       ${token_cliente}
 
 E que "${produto}" está cadastrado no meu dashboard
